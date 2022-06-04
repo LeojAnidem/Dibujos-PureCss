@@ -1,0 +1,238 @@
+:root{
+    --morado: #662c8e;
+    --gris: #324a5a;
+    --gris-oscuro: #0a3143;
+    --gris-claro: #7297a2;
+    --gris-blanco: #adbcc6;
+    --blanco: #ffffff;
+    --blanco-gris: #cedeea;
+    --negro: #000000;
+
+    --fondo: #662c8e;
+    --casco: #324a5a;
+    --casco-sombra: #0a3143;
+    --casco-reflejo: #7297a2;
+    --ojos: #ffffff;
+    --cara: #000000;
+    --cuerpo: #000000;
+    --brazos: #000000;
+    --piernas: #000000;
+    --manos: #7297a2;
+    --espada-hoja: #ffffff;
+    --espada-hoja-reflejo: #cedeea;
+    --espada-hoja-base: #adbcc6;
+    --espada-mango: #000000;
+    --espada-mango-cinturon: #000000;
+    --escudo: #cedeea;
+    --escudo-sombra: #adbcc6;
+    --escudo-reflejo: #ffffff;
+    --escudo-emblema: #324a5a;
+    --escudo-emblema-centro: #ffffff;
+
+    --sombra: 1;
+    --base: 2;
+    --elemento: 3;
+    --luz: 4;
+    --accesorio: 5;
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    overflow: hidden;
+
+    display: grid;
+    place-items: center;
+
+    height: 100vh;
+
+    background: var(--fondo);
+}
+
+
+.guerrero{
+    position: relative;
+
+    width: 400px;
+    height: 380px;
+
+    background: #dd1aff41;
+}
+
+.casco{
+    overflow: hidden;
+
+    position: absolute;
+    top: 55px;
+    left: 60px;
+
+    width: 195px;
+    height: 215px;
+    
+    border-top-left-radius: 100px;
+    border-top-right-radius: 100px;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+}
+
+.casco::after{
+    z-index: var(--sombra); 
+
+    content: '';
+    position: absolute;
+
+    width: 112px;
+    height: 215px;
+
+    background: var(--casco-sombra);
+}
+
+.casco::before{
+    z-index: var(--base);
+
+    content: '';
+    position: absolute;
+    right: 0;
+
+    width: 165px;
+    height: 215px;
+
+    border-top-left-radius: 100px;
+
+    background: var(--casco);
+}
+
+.casco__reflejo{
+    overflow: hidden;
+    z-index: var(--luz);
+
+    position: absolute;
+    top: 18px;
+    right: 20px;
+
+    width: 60px;
+    height: 54px;
+
+    border-top-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+}
+
+.casco__reflejo::after{
+    z-index: var(--luz);
+
+    content: '';
+    position: absolute;
+    top: 12px;
+    right: 12px;
+
+    width: 130px;
+    height: 120px;
+
+    border-radius: 100%;
+
+    background: var(--casco);
+}
+
+.casco__reflejo::before{
+    z-index: var(--base);
+
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    width: 130px;
+    height: 120px;
+
+    border-radius: 100%;
+
+    background: var(--casco-reflejo);
+}
+
+.espacio-ojos{
+    overflow: hidden;
+    z-index: var(--elemento);
+
+    position: absolute;
+    top: 95px;
+    left: 55px;
+
+    width: 126px;
+    height: 45px;
+
+    border-top-left-radius: 24px;
+    border-top-right-radius: 24px;
+    border-bottom-left-radius: 24px;
+    border-bottom-right-radius: 24px;
+
+    background: var(--cara);
+}
+
+.ojo{
+    z-index: calc(var(--elemento) + 1);
+
+    position: absolute;
+    top: 12px;
+
+    width: 20px;
+    height: 20px;
+
+    border-radius: 100%;
+
+    background: var(--ojos);
+}
+
+.ojo-izq{
+    left: 19px;
+}
+
+.ojo-der{
+    right: 14px;
+}
+
+.espacio-boca{
+    z-index: var(--elemento);
+
+    position: absolute;
+    top: 140px;
+    right: 40px;
+
+    width: 64px;
+    height: 75px;
+
+    background: var(--cara);
+}
+
+.espacio-boca::after{
+    z-index: var(--base);
+
+    content: '';
+    position: absolute;
+
+    width: 10px;
+    height: 75px;
+
+    border-top-right-radius: 30px;
+
+    background: var(--casco);
+}
+
+.espacio-boca::before{
+    z-index: var(--base);
+
+    content: '';
+    position: absolute;
+    right: 0;
+
+    width: 10px;
+    height: 75px;
+
+    border-top-left-radius: 30px;
+
+    background: var(--casco);
+}
+
