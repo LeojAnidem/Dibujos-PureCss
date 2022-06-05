@@ -518,3 +518,138 @@ body{
 
     background: var(--espada-hoja-reflejo);
 }
+
+.escudo{
+    overflow: hidden;
+    z-index: var(--esc);
+
+    position: absolute;
+    top: 200px;
+    left: 18px;
+
+    width: 134px;
+    height: 134px;
+
+    border-radius: 100%;
+
+    background: var(--escudo-sombra);
+}
+
+.escudo::after{
+    z-index: calc(var(--esc) + 1);
+
+    content: '';
+    position: absolute;
+    top: -14px;
+    left: 8px;
+
+    width: 134px;
+    height: 134px;
+
+    border-radius: 100%;
+
+    background: var(--escudo);
+}
+
+.escudo__emblema{
+    z-index: calc(var(--esc) + 2);
+
+    position: absolute;
+    top: 28px;
+    left: 28px;
+
+    width: 78px;
+    height: 78px;
+
+    border-radius: 100%;
+
+    background: var(--escudo-emblema);
+}
+
+.escudo__emblema::after{
+    z-index: calc(var(--esc) + 3);
+
+    content: '';
+    position: absolute;
+    top: 26px;
+    left: 26px;
+
+    width: 26px;
+    height: 26px;
+
+    border-radius: 100%;
+
+    background: var(--escudo-emblema-centro);
+}
+
+.escudo__reflejo{
+    overflow: hidden;
+    z-index: calc(var(--esc) + 2);
+
+    position: absolute;
+    top: 6px;
+    left: 42px;
+
+    width: 86px;
+    height: 92px;
+
+    border-top-right-radius: 60px;
+    border-top-left-radius: 20px;
+    border-bottom-right-radius: 24px;
+
+    background: var(--escudo);
+}
+
+.escudo__reflejo::after{
+    z-index: calc(var(--esc) + 2);
+
+    content: '';
+    position: absolute;
+    top: 16px;
+    left: -24px;
+
+    width: 96px;
+    height: 96px;
+
+    border-radius: 100%;
+
+    background: var(--escudo);
+}
+
+.escudo__reflejo__fondo{
+    position: absolute;
+    left: 12px;
+
+    width: 80px;
+    height: 76px;
+
+    background: var(--escudo-reflejo);
+}
+
+.escudo__reflejo__fondo::after{
+    content: '';
+    position: absolute;
+    top: 1px;
+    left: -7px;
+
+    width: 17px;
+    height: 17px;
+
+    border-radius: 100%;
+
+    background: var(--escudo-reflejo);
+}
+
+.escudo__reflejo__fondo::before{
+    content: '';
+    position: absolute;
+    bottom: -7px;
+    right: 7px;
+
+    width: 15px;
+    height: 14px;
+
+    border-radius: 100%;
+
+    background: var(--escudo-reflejo);
+}
