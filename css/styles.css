@@ -20,7 +20,7 @@
     --cuerpo: #000000;
     --brazos: #000000;
     --piernas: #000000;
-    --manos: #7297a2;
+    --manos: #324a5a;
     --espada-hoja: #ffffff;
     --espada-hoja-reflejo: #cedeea;
     --espada-hoja-base: #adbcc6;
@@ -39,27 +39,15 @@
     
     --brazos-inx: 1;
     
-    --cue-detras-fondo: 3;
-    --cue-detras-reflejo: 4;
+    --cue-detras: 2;
     
-    --cab-sombra: 5;
-    --cab-fondo: 6;
-    --cab-reflejo: 7;
-    --cab-elementos: 8;
+    --cab: 3;
     
-    --cue-frente-fondo: 9;
-    --cue-frente-sombra: 10;
-    --cue-frente-reflejo: 11;
+    --cue-frente: 4;
     
-    --esc-sombra: 12;
-    --esc-fondo: 13;
-    --esc-emblema: 13;
-    --esc-emblema-frente: 14;
-    --esc-reflejo: 15;
+    --esc: 5;
     
-    --esp-mango: 12;
-    --esp-hoja: 13;
-    --manos-inx: 13; 
+    --esp: 6;
 }
 
 *{
@@ -90,12 +78,20 @@ body{
 }
 
 .casco{
-    overflow: hidden;
-    z-index: var(--cab-fondo);
-
     position: absolute;
     top: 55px;
-    left: 60px;
+    left: 32px;
+
+    width: 246px;
+    height: 215px;
+}
+
+.casco__cabecera{
+    z-index: var(--cab);
+    overflow: hidden;
+
+    position: absolute;
+    left: 27px;
 
     width: 195px;
     height: 215px;
@@ -106,8 +102,8 @@ body{
     border-bottom-right-radius: 30px;
 }
 
-.casco::after{
-    z-index: var(--cab-sombra); 
+.casco__cabecera::after{
+    z-index: calc(var(--cab) - 1); 
 
     content: '';
     position: absolute;
@@ -118,8 +114,8 @@ body{
     background: var(--casco-sombra);
 }
 
-.casco::before{
-    z-index: var(--cab-fondo);
+.casco__cabecera::before{
+    z-index: var(--cab);
 
     content: '';
     position: absolute;
@@ -135,7 +131,7 @@ body{
 
 .casco__reflejo{
     overflow: hidden;
-    z-index: var(--cab-reflejo);
+    z-index: var(--cab);
 
     position: absolute;
     top: 18px;
@@ -178,7 +174,7 @@ body{
 
 .espacio-ojos{
     overflow: hidden;
-    z-index: var(--cab-elementos);
+    z-index: var(--cab);
 
     position: absolute;
     top: 95px;
@@ -213,7 +209,7 @@ body{
 }
 
 .espacio-boca{
-    z-index: var(--cab-elementos);
+    z-index: var(--cab);
 
     position: absolute;
     top: 140px;
@@ -251,11 +247,11 @@ body{
 }
 
 .cuernos{
-    z-index: var(--cue-frente-fondo);
+    z-index: var(--cue-frente);
     overflow: hidden;
 
     position: absolute;
-    top: 90px;
+    top: 37px;
     
     width: 74px;
     height: 88px;
@@ -315,19 +311,19 @@ body{
 }
 
 .cuernos--izq{
-    left: 32px;
+    left: 0;
 }
 
 .cuernos--der{
-    z-index: var(--cue-detras-fondo);
+    z-index: var(--cue-detras);
 
-    right: 120px;
+    right: 0;
 
     transform: rotateY(180deg);
 }
 
 .cuernos__reflejo{
-    z-index: var(--cue-frente-reflejo);
+    z-index: var(--cue-frente);
 
     position: absolute;
     top: 16px;
@@ -342,7 +338,7 @@ body{
 }
 
 .cuernos__reflejo--der{
-    z-index: var(--cue-detras-reflejo);
+    z-index: var(--cue-detras);
 
     top: 4px;
     left: -4px;
@@ -379,7 +375,7 @@ body{
     z-index: var(--piernas-inx);
 
     position: absolute;
-    bottom: 44px;
+    bottom: -20px;
 
     width: 26px;
     height: 22px;
@@ -388,9 +384,137 @@ body{
 }
 
 .pierna--izq{
-    left: 100px;
+    left: 20px;
 }
 
 .pierna--der{
-    left: 156px;
+    left: 75px;
+}
+
+.brazo{
+    z-index: var(--brazos-inx);
+    
+    position: absolute;
+    top: -12px;
+
+    width: 34px;
+    height: 50px;
+
+    background: var(--brazos);
+}
+
+.brazo--izq{
+    left: -8px;
+
+    border-right: 2px solid var(--fondo);
+    border-bottom: 2px solid var(--fondo);
+}
+
+.brazo--der{
+    right: -30px;
+
+    transform: rotate(-45deg);
+}
+
+.espada{
+    z-index: var(--esp);
+
+    position: absolute;
+    top: 190px;
+    right: -9px;
+
+    width: 238px;
+    height: 88px;
+
+    transform: rotate(-45deg);
+}
+
+.espada__mango{
+    position: absolute;
+    top: 30px;
+
+    width: 70px;
+    height: 30px;
+
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+
+    background: var(--espada-mango);
+}
+
+.espada__mango::after{
+    z-index: calc(var(--esp) + 1);
+
+    content: '';
+    position: absolute;
+    top: -30px;
+    right: 0;
+
+    width: 14px;
+    height: 88px;
+
+    background: var(--espada-mango-cinturon);
+}
+
+.espada__mango::before{
+    z-index: var(--esp);
+
+    content: '';
+    position: absolute;
+    top: -22px;
+    right: -14px;
+
+    width: 16px;
+    height: 74px;
+
+    background:  var(--espada-hoja-base);
+}
+
+.espada__mano{
+    z-index: calc(var(--esp) + 1);
+
+    position: absolute;
+    top: 32px;
+    left: 10px;
+
+    width: 44px;
+    height: 44px;
+
+    border-radius: 100%;
+
+    background: var(--manos);
+}
+
+.espada__hoja{
+    overflow: hidden;
+
+    position: absolute;
+    top: 8px;
+    left: 84px;
+
+    width: 154px;
+    height: 74px;
+
+    clip-path: polygon(77% 0%,100% 50%, 77% 100%, 0 100%, 0 0);
+}
+
+.espada__hoja::after{
+    content: '';
+    position: absolute;
+
+    width: 154px;
+    height: 37px;
+
+    background: var(--espada-hoja);
+}
+
+.espada__hoja::before{
+    content: '';
+    position: absolute;
+    bottom: 0;
+
+    width: 154px;
+    height: 37px;
+
+    background: var(--espada-hoja-reflejo);
 }
