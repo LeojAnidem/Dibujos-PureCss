@@ -21,6 +21,7 @@
     --brazos: #000000;
     --piernas: #000000;
     --manos: #324a5a;
+    --sombra: #0000002c;
     --espada-hoja: #ffffff;
     --espada-hoja-reflejo: #cedeea;
     --espada-hoja-base: #adbcc6;
@@ -34,19 +35,12 @@
 
 
     --cuerpo-inx: 1;
-
     --piernas-inx: 1;
-    
     --brazos-inx: 1;
-    
     --cue-detras: 2;
-    
     --cab: 3;
-    
     --cue-frente: 4;
-    
     --esc: 5;
-    
     --esp: 6;
 }
 
@@ -71,16 +65,14 @@ body{
 .guerrero{
     position: relative;
 
-    width: 400px;
-    height: 380px;
-
-    background: #dd1aff41;
+    width: 380px;
+    height: 320px;
 }
 
 .casco{
     position: absolute;
-    top: 55px;
-    left: 32px;
+    top: 26px;
+    left: 22px;
 
     width: 246px;
     height: 215px;
@@ -359,8 +351,8 @@ body{
     z-index: var(--cuerpo-inx);
 
     position: absolute;
-    bottom: 66px;
-    left: 80px;
+    bottom: 36px;
+    left: 70px;
 
     width: 118px;
     height: 46px;
@@ -377,7 +369,7 @@ body{
     position: absolute;
     bottom: -20px;
 
-    width: 26px;
+    width: 30px;
     height: 22px;
 
     background: var(--piernas);
@@ -416,12 +408,26 @@ body{
     transform: rotate(-45deg);
 }
 
+.cuerpo__sombra{
+    z-index: calc(var(--cuerpo-inx) - 1);
+
+    position: absolute;
+    top: 56px;
+
+    width: 120px;
+    height: 16px;
+
+    border-radius: 30px;
+
+    background: var(--sombra);
+}
+
 .espada{
     z-index: var(--esp);
 
     position: absolute;
-    top: 190px;
-    right: -9px;
+    top: 160px;
+    right: -19px;
 
     width: 238px;
     height: 88px;
@@ -524,8 +530,8 @@ body{
     z-index: var(--esc);
 
     position: absolute;
-    top: 200px;
-    left: 18px;
+    top: 170px;
+    left: 6px;
 
     width: 134px;
     height: 134px;
