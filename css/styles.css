@@ -9,25 +9,31 @@
     --negro: #000000;
 
     --fondo: #662c8e;
+
     --casco: #324a5a;
+
     --casco-sombra: #0a3143;
     --casco-reflejo: #7297a2;
     --cuerno: #ffffff;
     --cuerno-reflejo: #cedeea;
     --cuerno-sombra: #cedeea;
     --ojos: #ffffff;
+
     --cara: #000000;
     --cuerpo: #000000;
     --brazos: #000000;
     --piernas: #000000;
     --manos: #324a5a;
+
     --sombra: #0000002c;
     --espada-hoja: #ffffff;
     --espada-hoja-reflejo: #cedeea;
     --espada-hoja-base: #adbcc6;
+
     --espada-mango: #000000;
     --espada-mango-cinturon: #000000;
     --escudo: #cedeea;
+
     --escudo-sombra: #adbcc6;
     --escudo-reflejo: #ffffff;
     --escudo-emblema: #324a5a;
@@ -70,8 +76,6 @@ body{
 
     width: var(--width-warrior);
     height: var(--height-warrrior);
-    
-    border: 1px solid green;
 }
 
 .casco{
@@ -535,11 +539,11 @@ body{
     z-index: var(--esc);
 
     position: absolute;
-    top: 170px;
-    left: 6px;
+    top: calc(.447 * var(--width-warrior));
+    left: calc(.01875 * var(--height-warrrior));
 
-    width: 134px;
-    height: 134px;
+    width: calc(.3526 * var(--width-warrior));
+    height: calc(.41875 * var(--height-warrrior));
 
     border-radius: 100%;
 
@@ -551,11 +555,11 @@ body{
 
     content: '';
     position: absolute;
-    top: -14px;
-    left: 8px;
+    top: -10.447%;
+    left: 5.970%;
 
-    width: 134px;
-    height: 134px;
+    width: 100%;
+    height: 100%;
 
     border-radius: 100%;
 
@@ -566,11 +570,11 @@ body{
     z-index: calc(var(--esc) + 2);
 
     position: absolute;
-    top: 28px;
-    left: 28px;
+    top: 20.895%;
+    left: 20.895%;
 
-    width: 78px;
-    height: 78px;
+    width: 58.2089%;
+    height: 58.2089%;
 
     border-radius: 100%;
 
@@ -582,11 +586,11 @@ body{
 
     content: '';
     position: absolute;
-    top: 26px;
-    left: 26px;
+    top: 33.333%;
+    left: 33.333%;
 
-    width: 26px;
-    height: 26px;
+    width: 33.333%;
+    height: 33.333%;
 
     border-radius: 100%;
 
@@ -598,15 +602,13 @@ body{
     z-index: calc(var(--esc) + 2);
 
     position: absolute;
-    top: 6px;
-    left: 42px;
+    top: 4.477%;
+    left: 31.343%;
 
-    width: 86px;
-    height: 92px;
+    width: 64.179%;
+    height: 68.656%;
 
-    border-top-right-radius: 60px;
-    border-top-left-radius: 20px;
-    border-bottom-right-radius: 24px;
+    border-radius: 23.255% 69.767% 27.906% 0 / 21.739% 65.217% 26.086% 0;
 
     background: var(--escudo);
 }
@@ -616,11 +618,11 @@ body{
 
     content: '';
     position: absolute;
-    top: 16px;
-    left: -24px;
+    top: 17.391%;
+    left: -27.906%;
 
-    width: 96px;
-    height: 96px;
+    width: 111.627%;
+    height: 104.347%;
 
     border-radius: 100%;
 
@@ -629,10 +631,10 @@ body{
 
 .escudo__reflejo__fondo{
     position: absolute;
-    left: 12px;
+    left: 13.953%;
 
-    width: 80px;
-    height: 76px;
+    width: 93.023%;
+    height: 82.608%;
 
     background: var(--escudo-reflejo);
 }
@@ -640,11 +642,11 @@ body{
 .escudo__reflejo__fondo::after{
     content: '';
     position: absolute;
-    top: 1px;
-    left: -7px;
+    top: 1.3157%;
+    left: -8.75%;
 
-    width: 17px;
-    height: 17px;
+    width: 21.25%;
+    height: 22.368%;
 
     border-radius: 100%;
 
@@ -654,11 +656,11 @@ body{
 .escudo__reflejo__fondo::before{
     content: '';
     position: absolute;
-    bottom: -7px;
-    right: 7px;
+    bottom: -9.210%;
+    right: 8.75%;
 
-    width: 15px;
-    height: 14px;
+    width: 18.75%;
+    height: 18.421%;
 
     border-radius: 100%;
 
