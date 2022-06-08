@@ -6,13 +6,62 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Dibujando En Css | Practica</title>
+    <title>Draw In PureCss | Practice</title>
+    <link rel="short icon" href="./Assets/svg/pen-ruler-solid.svg">
+    
+    <!-- Page Styles -->
     <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="./css/warrior.css">
+    
+    <!-- Normalize.css -->
+    <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
+    
+    <!-- Font-Awesome icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/duyplus/fontawesome-pro/css/all.css">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <!-- M PLUS Rounded 1c Font -light(300)-Regular(400)-Bold (700)-->
+    <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@300;400;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
+    <header>
+        <section class="logo">
+            <i class="logo__icon fa-solid fa-pen-ruler"></i>
+            <h1 class="logo__text">Draw In PureCss</h1>
+        </section>
+
+        <section class="navbar">
+            <div class="navbar__item">
+                <input class="navbar__chk" id="chk__edit-off-on" type="checkbox">
+
+                <label class="navbar__icon-container" for="chk__edit-off-on">
+                    <i class="navbar__icon navbar__icon--on fal fa-shield-cat"></i>
+                    <i class="navbar__icon navbar__icon--off fas fa-shield-cat"></i>
+                </label>
+
+                <div class="pop-msg">
+                    <p class="pop-msg__text">
+                        MeowProcted:
+
+                        <span class="pop-msg__text--featured pop-msg__text--enabled">
+                            enabled!
+                        </span>
+
+                        <span class="pop-msg__text--featured pop-msg__text--disabled">
+                            disabled!
+                        </span>
+                    </p>
+                </div>
+            </div>
+        </section>
+    </header>
+
     <main>
-        <section class="warrior hero">
+        <section class="warrior">
             <div class="warrior__body">
                 <div class="warrior__shadow"></div>
 
@@ -79,6 +128,19 @@
             </div>
         </section>
     </main>
+
+    <footer>
+        <section class="credits">
+            <p class="credits__text">
+                Made with 
+                <i class="credits__icon fa-solid fa-heart"></i>
+                by
+                <a class="credits__link" href="">
+                    @Leoj_Anidem
+                </a>
+            </p>
+        </section>
+    </footer>
 </body>
 
 </html>
