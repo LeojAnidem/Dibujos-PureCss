@@ -28,6 +28,8 @@
 
 *{
     box-sizing: border-box;
+    padding: 0;
+    margin: 0;
 }
 
 html{
@@ -51,9 +53,14 @@ body{
     font-size: var(--font-sm);
 }
 
+img{
+    width: 100%;
+    height: 100%;
+}
+
 header{
     position: absolute;
-    padding: 30px 50px;
+    padding: 50px 70px;
     top: 0;
 
     display: flex;
@@ -73,11 +80,17 @@ header{
     gap: 20px;
 }
 
+.icon{
+    cursor: pointer;
+    color: var(--c-icon);
+}
+
+.icon:hover{
+    color: var(--c-icon-hover);
+}
+
 .logo__icon,
 .navbar__icon{
-    cursor: pointer;
-
-    color: var(--c-icon);
     font-size: var(--font-lg);
 }
 
@@ -99,7 +112,7 @@ header{
 }
 
 .pop-msg{
-    padding: 0 20px;
+    padding: 10px 20px;
 
     position: absolute;
     top: 100px;
@@ -154,16 +167,81 @@ header{
 }
 
 .navbar__chk:not(:checked) ~ .pop-msg{
-    animation: fade-in-out 3s;
+    animation: fade-in-out 1.5s;
 }
 
 .navbar__chk:checked ~ .pop-msg{
-    animation: fade-in-out-2 3s;
+    animation: fade-in-out-2 1.5s;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+}
+
+.text-coming-soon{
+    color: var(--c-icon);
+    font-size: var(--font-lg);
+    font-weight: bold;
+}
+
+.container-slider{
+    position: relative;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 400px;
+    height: 400px;
+}
+
+.slider-item{
+    display: none;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    height: 100%;
+}
+
+.slider__angle{
+    position: absolute;
+
+    font-size: var(--font-lg);
+}
+
+.slider__angle--prev{
+    left: -100px;
+}
+
+.slider__angle--next{
+    right: -100px;
+}
+
+.slider-dot-container{
+    display: flex;
+    gap: 20px;
+}
+
+.no-active{
+    display: none;
+    animation: fade-out .5s;
+    opacity: 0;
+
+}
+
+.active{
+    display: flex;
+    animation: fade-in 1.5s;
+    opacity: 1;
 }
 
 footer{
     position: absolute;
-    padding: 10px 50px;
+    padding: 36px 0;
     bottom: 0;
 
     display: flex;
@@ -219,11 +297,32 @@ footer{
 
     50%{
         top: 50px;
-        opacity: 100%;
+        opacity: 1;
     }
 
     to{
         top: 70px;
         opacity: 0;
+    }
+}
+
+@keyframes fade-out{
+    from{
+        opacity: 1;
+    }
+
+    to{
+        opacity: 0;
+    }
+}
+
+@keyframes fade-in{
+    from{
+        display: block;
+        opacity: 0;
+    }
+
+    to{
+        opacity: 1;
     }
 }

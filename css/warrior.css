@@ -42,8 +42,6 @@
 }
 
 .warrior{
-    margin-left: 60px;
-
     position: relative;
 
     width: var(--width-warrior);
