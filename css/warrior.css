@@ -121,11 +121,11 @@
 }
 
 .warrior__mouth-mask--left{
-    left: 0;
+    left: -1.656%;
 }
 
 .warrior__mouth-mask--right{
-    right: 0;
+    right: -1.656%;
 
     transform: rotateY(180deg);
 }
