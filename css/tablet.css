@@ -1,0 +1,26 @@
+@media screen and (min-width: 428px) and (max-width: 1024px) {
+    :root{
+        --size-warrior: 360px;
+    }
+
+    header{
+        padding: 60px;
+    }
+
+    main{
+        gap: 15px;
+    }
+
+    .container-slider{
+        width: 360px;
+        height: 360px;
+    }
+
+    .slider__angle--prev{
+        left: -50px;
+    }
+
+    .slider__angle--next{
+        right: -50px;
+    }
+}

@@ -1,0 +1,38 @@
+@media screen and (max-width: 428px) {
+    :root{
+        --size-warrior: 280px;
+    }
+    
+    header{
+        padding: 40px 20px;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .pop-msg{
+        z-index: 2;
+        top: 50px;
+        right: -130px;
+
+        display: flex;
+        justify-content: center;
+    }
+
+    .pop-msg::before,
+    .pop-msg::after{
+        right: 133px;
+    }
+
+    .container-slider{
+        width: 300px;
+        height: 300px;
+    }
+
+    .slider__angle--prev{
+        left: -20px;
+    }
+
+    .slider__angle--next{
+        right: -20px;
+    }
+}

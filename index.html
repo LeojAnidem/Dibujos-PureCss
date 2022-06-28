@@ -6,68 +6,161 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Dibujando En Css | Practica</title>
+    <title>Draw In PureCss | Practice</title>
+    <link rel="short icon" href="./Assets/svg/pen-ruler-solid.svg">
+    
+    <!-- Page Styles -->
+    <link rel="stylesheet" href="./css/warrior.css">
     <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="./css/mobile.css">
+    <link rel="stylesheet" href="./css/tablet.css">
+    
+    <!-- Font-Awesome icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/duyplus/fontawesome-pro/css/all.css">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <!-- M PLUS Rounded 1c Font -light(300)-Regular(400)-Bold (700)-->
+    <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@300;400;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
-    <main>
-        <section class="guerrero">
-            <div class="casco">
-                <div class="casco__cabecera">
-                    <div class="casco__reflejo"></div>
+    <header>
+        <section class="logo">
+            <i class="logo__icon icon fa-solid fa-pen-ruler"></i>
+            <h1 class="logo__text">Draw In PureCss</h1>
+        </section>
 
-                    <div class="espacio-ojos">
-                        <div class="ojo ojo-izq"></div>
-                        <div class="ojo ojo-der"></div>
-                    </div>
+        <section class="navbar">
+            <div class="navbar__item">
+                <input class="navbar__chk" id="chk__edit-off-on" type="checkbox">
 
-                    <div class="espacio-boca"></div>
+                <label class="navbar__icon-container" for="chk__edit-off-on">
+                    <i class="navbar__icon navbar__icon--on icon fal fa-shield-cat"></i>
+                    <i class="navbar__icon navbar__icon--off icon fas fa-shield-cat"></i>
+                </label>
+
+                <div class="pop-msg">
+                    <p class="pop-msg__text">
+                        MeowProcted:
+
+                        <span class="pop-msg__text--featured pop-msg__text--enabled">
+                            enabled!
+                        </span>
+
+                        <span class="pop-msg__text--featured pop-msg__text--disabled">
+                            disabled!
+                        </span>
+                    </p>
                 </div>
-
-                <div class="cuernos cuernos--izq">
-                    <div class="cuernos__reflejo"></div>
-    
-                    <div class="cuernos__parte-superior"></div>
-    
-                    <div class="cuernos__parte-inferior"></div>
-                </div>
-    
-                <div class="cuernos cuernos--der">
-                    <div class="cuernos__reflejo cuernos__reflejo--der"></div>
-    
-                    <div class="cuernos__parte-superior cuernos__parte-superior--der"></div>
-    
-                    <div class="cuernos__parte-inferior cuernos__parte-inferior--der"></div>
-                </div>
-            </div>
-
-            <div class="cuerpo">
-                <div class="brazo brazo--izq"></div>
-                <div class="brazo brazo--der"></div>
-                <div class="pierna pierna--izq"></div>
-                <div class="pierna pierna--der"></div>
-
-                <div class="cuerpo__sombra"></div>
-            </div>
-
-            <div class="espada">
-                <div class="espada__mango"></div>
-
-                <div class="espada__mano"></div>
-
-                <div class="espada__hoja"></div>
-            </div>
-
-            <div class="escudo">
-                <div class="escudo__reflejo">
-                    <div class="escudo__reflejo__fondo"></div>
-                </div>
-
-                <div class="escudo__emblema"></div>
             </div>
         </section>
+    </header>
+
+    <main>
+        <section class="hero-mod">
+            
+        </section>
+
+        <section class="container-slider">
+            <div class="slider-item">
+                <div class="warrior">
+                    <div class="warrior__body">
+                        <div class="warrior__shadow"></div>
+        
+                        <div class="warrior__leg warrior__leg--left"></div>
+                        <div class="warrior__leg warrior__leg--right"></div>
+                        <div class="warrior__arm warrior__arm--left"></div>
+                        <div class="warrior__arm warrior__arm--right"></div>
+                    </div>
+        
+                    <div class="warrior__head">
+                        <div class="warrior__horn warrior__horn--right">
+                            <div class="warrior__horn-top warrior__horn-top--model-2"></div>
+                            <div class="warrior__horn-light warrior__horn-light--model-2"></div>
+                        </div>
+        
+                        <div class="warrior__helmet">
+        
+                            <div class="warrior__helmet-shadow"></div>
+        
+                            <div class="warrior__mouth">
+                                <div class="warrior__mouth-mask warrior__mouth-mask--left"></div>
+                                <div class="warrior__mouth-mask warrior__mouth-mask--right"></div>
+                            </div>
+        
+                            <div class="warrior__eyes-bg">
+                                <div class="warrior__eyes warrior__eyes--left"></div>
+                                <div class="warrior__eyes warrior__eyes--right"></div>
+                            </div>
+        
+                            <div class="warrior__helmet-light"></div>
+                        </div>
+        
+                        <div class="warrior__horn warrior__horn--left">
+                            <div class="warrior__horn-top warrior__horn-top--model-1"></div>
+                            <div class="warrior__horn-bottom warrior__horn-bottom--model-1"></div>
+                            <div class="warrior__horn-light warrior__horn-light--model-1"></div>
+                        </div>
+                    </div>
+        
+                    <div class="warrior__sword">
+                        <div class="warrior__sword-grid">
+                            <div class="warrior__sword-guard"></div>
+                            <div class="warrior__sword-rain-guard"></div>
+                        </div>
+        
+                        <div class="warrior__sword-hand"></div>
+        
+                        <div class="warrior__sword-blade">
+                            <div class="warrior__sword-edge warrior__sword-edge--true"></div>
+                            <div class="warrior__sword-edge warrior__sword-edge--false"></div>
+                        </div>
+                    </div>
+        
+                    <div class="warrior__shield">
+                        <div class="warrior__shield-shadow"></div>
+                        
+                        <div class="warrior__shield-light-bg">
+                            <div class="warrior__shield-light"></div>
+                        </div> 
+                        
+                        <div class="warrior__shield-emblem">
+                            <div class="warrior__shield-emblem-center"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="slider-item">
+                <span class="text-coming-soon">Coming Soon!</span>
+            </div>
+
+            <i class="slider__angle slider__angle--prev icon fas fa-angle-left"></i>
+            <i class="slider__angle slider__angle--next icon fas fa-angle-right"></i>
+        </section>
+
+        <section class="slider-dot-container">
+        </section>
     </main>
+
+    <footer>
+        <section class="credits">
+            <p class="credits__text">
+                Made with 
+                <i class="credits__icon fa-solid fa-heart"></i>
+                by
+                <a class="credits__link" href="">
+                    @Leoj_Anidem
+                </a>
+            </p>
+        </section>
+    </footer>
+
+    <script src="./app.js" type="module">
+    </script>
 </body>
 
 </html>
